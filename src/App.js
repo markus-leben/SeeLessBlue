@@ -118,6 +118,7 @@ const BirdImage = styled.img`
 const AppHeader = styled.header`
   background-color: #657786;
   padding: 10px 15px;
+  text-align: center;
 `
 
 const Title = styled.h2`
