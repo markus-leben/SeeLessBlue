@@ -8,8 +8,20 @@ This code is maintained by [Markus Leben](https://twitter.com/Mark_Confidant), a
 
 ### Install from the Web Store (Do this one unless you're messing around with editing code)
 
+Chrome Web Store is currently reviewing this extension. I will update this readme once it's published.
+
 ### Install with this Repo
 
 1. Download this repo and install required libraries.
 2. Run npm run build
 3. Open chrome extensions, choose 'load unpacked' and find the folder labeled 'build'.
+
+## What it looks like
+
+Here's a before image of a random Jimmy Fallon Tweet:
+
+![An image of a Jimmy Fallon Twitter Feed, with many paid users](./github-assets/FallonBefore.png)
+
+And here's what it looks like with See Less Blue active:
+
+![An image of a Jimmy Fallon Twitter Feed, with no paid users](./github-assets/FallonAfter.png)
