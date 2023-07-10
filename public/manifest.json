@@ -1,7 +1,7 @@
 {
-  "short_name": "See Less Blue",
-  "name": "See Less Twitter Blue Users",
-  "version": "0.0.1",
+  "short_name": "SeeLessBlue",
+  "name": "See Less Blue",
+  "version": "1.0.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "./static/scripts/background.js"

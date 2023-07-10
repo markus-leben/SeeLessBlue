@@ -71,10 +71,12 @@ function App() {
       {  Object.keys(settingDict).length !== 0 ?
       <>
         <AppHeader className="App-header">
-        <BirdImage src={logo} className="App-logo" alt="logo" />
+        <HeaderGrid>
+          <BirdImage src={logo} className="App-logo" alt="logo" />
           <Title>
-           See Less Blue Settings
+            See Less Blue Settings
           </Title>
+        </HeaderGrid>
         </AppHeader>
 
         <DisplayGrid>
@@ -85,11 +87,11 @@ function App() {
           <div>
             <Toggle status={settingDict.hideInReplies} setting="hideInReplies" click={handleToggle}/>
           </div>
-          <div>Hide blue users in replies.</div>
+          <ToggleInstructions>Hide blue users in replies.</ToggleInstructions>
           <div>
             <Toggle status={settingDict.hideInFeed} setting="hideInFeed" click={handleToggle}/>
           </div>
-          <div>Hide blue users in my feed.</div>
+          <ToggleInstructions>Hide blue users in my feed.</ToggleInstructions>
         </DisplayGrid>
       </> : null
       }
@@ -116,9 +118,16 @@ const BirdImage = styled.img`
 `
 
 const AppHeader = styled.header`
-  background-color: #657786;
-  padding: 10px 15px;
-  text-align: center;
+`
+
+const HeaderGrid = styled.div`
+  padding: 10px 5px;
+  display:grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 10px;
+  justify-items: start;
+  align-items: center;
+  background-color: black;
 `
 
 const Title = styled.h2`
@@ -127,20 +136,23 @@ const Title = styled.h2`
 `
 
 const DisplayGrid = styled.section`
+  padding: 10px 10px;
 	margin-left: 0%;
 	display:grid;
-	column-gap: 2%;
-	grid-template-columns: 34% 64%;
-	grid-template-rows: 80% 10%;
+  row-gap: 10px;
+	grid-template-columns: 40px 1fr;
+  column-gap: 10px;
+	grid-template-rows: 22px 22px;
 	max-width: 100%;
-	justify-items: stretch;
+	justify-items: start;
+  align-items: center;
 `;
 
 const ContainingLabel = styled.label`
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 40px;
+  height: 22px;
 `
 
 const HiddenCheck = styled.input`
@@ -151,6 +163,10 @@ const HiddenCheck = styled.input`
   &::checked{
     background-color: #2196F3;
   }
+`
+
+const ToggleInstructions = styled.div`
+  font-size: 1.35em;
 `
 
 const Slider = styled.span`
@@ -168,13 +184,13 @@ const Slider = styled.span`
   &::before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
     background-color: #F5F8FA;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: .25s;
+    transition: .25s;
     border-radius: 50%;
   }
 
@@ -183,9 +199,9 @@ const Slider = styled.span`
   }
 
   input:checked + &:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
   }
 `
 
