@@ -8,7 +8,7 @@ This code is maintained by [Markus Leben](https://twitter.com/Mark_Confidant), a
 
 ### Install from the Web Store (Do this one unless you're messing around with editing code)
 
-Chrome Web Store is currently reviewing this extension. I will update this readme once it's published.
+Just click 'add to Chrome' in the [Chrome Webstore](https://chrome.google.com/webstore/detail/see-less-blue/allmgdodlnhpefmikfbfjokpclkmlpkk).
 
 ### Install with this Repo
 
